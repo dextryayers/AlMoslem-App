@@ -55,7 +55,7 @@ Follow these steps to set up the project locally on your machine:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/dextryayers/AlMoslem-App.git
-cd qquran
+cd AlMoslem-App
 ```
 
 ### 2. Install Dependencies
