@@ -1,0 +1,6 @@
+node_modules/
+backend/
+dist/
+server.js
+deploy-cpanel.js
+next-sitemap.config.js

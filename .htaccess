@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------
+# | .HTACCESS FIX (FINAL)                                               |
+# ----------------------------------------------------------------------
+
+# 1. ATASI INDEX OF / (Arahkan ke server.js)
+DirectoryIndex server.js
+
+# 2. KEAMANAN (Sembunyikan daftar file jika error)
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 3. FORCE HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# INSTRUKSI SANGAT PENTING (WAJIB BACA)
+# ----------------------------------------------------------------------
+# Jika setelah save file ini muncul "KODINGAN / TEXT", itu NORMAL.
+# Itu artinya file .htaccess ini sudah bekerja, tapi cPanel belum "Start".
+#
+# SOLUSINYA:
+# 1. Buka cPanel > Setup Node.js App.
+# 2. Klik tombol "STOP APP".
+# 3. Klik tombol "START APP".
+#
+# (Langkah ini akan otomatis menambahkan kode konfigurasi server ke file ini).
